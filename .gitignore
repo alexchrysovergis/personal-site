@@ -1,0 +1,15 @@
+/htdocs/wp-config.php
+/htdocs/wp-config-sample.php
+/htdocs/license.txt
+/htdocs/readme.html
+/htdocs/index.html
+
+/htdocs/.htaccess
+
+/htdocs/wp-content/uploads/*
+/htdocs/wp-content/plugins/*
+!/htdocs/wp-content/plugins/index.php
+/htdocs/wp-content/themes/mavericks/dist/
+
+# Dependency directories
+/src/node_modules/
