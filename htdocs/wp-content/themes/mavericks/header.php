@@ -10,7 +10,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" role="navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="<?php echo home_url(); ?>">Alex Chrysovergis</a>
+    <a class="navbar-brand" href="<?php echo home_url(); ?>">Alexx</a>
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

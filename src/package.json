@@ -18,7 +18,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "jquery": "^3.7.1",
     "sass": "^1.72.0",
     "swiper": "^11.1.0"
+  },
+  "devDependencies": {
+    "mmenu-js": "^9.3.0"
   }
 }

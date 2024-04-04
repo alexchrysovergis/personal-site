@@ -2,14 +2,10 @@
 function mavericks_styles() {
   wp_enqueue_style( 'default-css', get_stylesheet_uri() );
   wp_enqueue_style('minified-sass', get_theme_file_uri('/dist/css/styles.min.css') );
-  wp_enqueue_style('minified-swiper-css', ('../../src/node_modules/swiper/swiper-bundle.min.css') );
 }
 
 function mavericks_scripts() {
   wp_enqueue_script( 'my-script', get_template_directory_uri() . '/dist/js/scripts.min.js', array('jquery'), '1.0', true );
-  wp_enqueue_script( 'minified-bootstrap-js', '../../src/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '1.0', true );
-  wp_enqueue_script( 'minified-popper-js', '../../src/node_modules/@popperjs/core/dist/umd/popper.min.js', array('jquery'), '1.0', true );
-  wp_enqueue_script( 'minified-swiper-js', '../../src/node_modules/swiper/swiper-bundle.min.js', array('jquery'), '1.0', true );
 }
 
 function mavericks_features() {
