@@ -17,5 +17,3 @@ var mySwiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-// mmmenu

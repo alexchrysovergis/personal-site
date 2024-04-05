@@ -1,0 +1,81 @@
+.cc-nb-main-container {
+  padding: 2.35rem;
+  font-family: 'Asty-Regular', sans-serif;
+  position: fixed;
+  bottom: 0;
+  background: #101010;
+  width: 100vw;
+  .cc-nb-title-container{
+    #cc-nb-title {
+      font-size: 20px;
+    }
+  }
+
+  .cc-nb-buttons-container{
+    .cc-nb-okagree {
+      background-color: #6ddbf2;
+    }
+    .cc-nb-reject {
+      color: #000;
+      background-color: #6ddbf2;
+    }
+  }
+}
+
+a#open_preferences_center {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 50px;
+  height: 50px;
+  background-color: #6ddbf2;
+  z-index: 2;
+  border-radius: 50%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.termsfeed-com---pc-overlay{
+  .termsfeed-com---pc-dialog{
+    .cc-pc-container{
+      padding: 2rem;
+      background: #101010;
+      border-radius: 25px;
+      .cc-pc-head{
+        background: #101010;
+      }
+  
+      .cc-cp-body-content{
+          background: #101010 !important; // can't override a third party !important rule so another !important had to be used
+        .cc-cp-body-content-entry{
+          background: #101010;
+        }
+      }
+      .cc-cp-body-tabs{
+        background: #101010;
+        .cc-cp-body-tabs-item-link{
+          background: #101010;
+        }
+        .cc-cp-body-tabs-item{
+          background: #101010;
+        }
+      }
+  
+      .cc-cp-foot{
+        background: #101010;
+        .cc-cp-foot-save{
+          background-color: #6ddbf2;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
