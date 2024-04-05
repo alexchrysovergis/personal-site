@@ -1,3 +1,20 @@
 .main-menu{
+  background-color: #101010;
   min-height: 10vh;
+  a{
+    @extend %smooth-hover;
+    color: #fff;
+    &:hover{
+      color:  #6ddbf2;
+    }
+  }
+  
+  .alexx-website-logo{
+    width: 50px;
+    @extend %smooth-hover;
+      &:hover{
+        opacity: 0.7;
+      }
+  }
 }
+

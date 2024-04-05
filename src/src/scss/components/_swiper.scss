@@ -1,34 +1,56 @@
-.swiper-slide {
-  max-height: 90vh;
-  position: relative;
-  text-align: center;
+.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+  .swiper-slide {
+    max-height: 90vh;
+    position: relative;
+    text-align: center;
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    .slide-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 5rem;
+    }
   }
-
-  .slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
+  //buttons styles
+  
+  .swiper-button-next:after, .swiper-button-prev:after{
     color: white;
-    font-size: 5rem;
+  }
+  
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    margin-left: 1.75rem;
+  }
+  
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    margin-right: 1.75rem;
+  }
+  
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+  }
+    
+  .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px));
+    background: #fff;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, .7);
+    border: solid 2px #fff;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: transparent;
+    opacity: var(--swiper-pagination-bullet-opacity, .7);
+    border: solid 2px #6ddbf2;
   }
 }
 
-//buttons styles
 
-.swiper-button-next:after, .swiper-button-prev:after{
-  color: white;
-}
-
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-  margin-left: 1.75rem;
-}
-
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-  margin-right: 1.75rem;
-}
