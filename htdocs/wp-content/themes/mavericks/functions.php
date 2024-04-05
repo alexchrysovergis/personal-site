@@ -36,3 +36,6 @@ add_action( 'wp_enqueue_scripts', 'mavericks_scripts' );
 add_action( 'wp_enqueue_scripts', 'mavericks_styles' );
 add_action( 'after_setup_theme', 'mavericks_features' );
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+add_filter( 'auto_update_plugin', '__return_false' );
+add_filter( 'auto_update_theme', '__return_false' );
