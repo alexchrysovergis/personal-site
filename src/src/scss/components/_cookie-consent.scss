@@ -16,25 +16,37 @@
       background-color: #6ddbf2;
     }
     .cc-nb-reject {
-      color: #000;
+      color: #101010;
       background-color: #6ddbf2;
     }
   }
 }
 
 a#open_preferences_center {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
+  @extend %smooth-hover;
+  bottom: 1.5rem;
+  left: 1.25rem;
   width: 50px;
   height: 50px;
+  background: url(/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png);
+  background-attachment: fixed;
   background-color: #6ddbf2;
+  color: black;
   z-index: 2;
   border-radius: 50%;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  // text-indent: 100%;
+  // white-space: nowrap;
+  // overflow: hidden;
   opacity: 0.7;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  .cookie{
+    top: 12px;
+    left: 12px;
+  }
 }
 
 .termsfeed-com---pc-overlay{
@@ -45,6 +57,23 @@ a#open_preferences_center {
       border-radius: 25px;
       .cc-pc-head{
         background: #101010;
+        .cc-pc-head-close{
+          border-color: transparent;
+          @extend %smooth-hover;
+          &:hover, &:active {
+            border-color: #6ddbf2;
+          }
+        }
+
+        .cc-pc-head-lang-select{
+          color: white;
+          background: #101010;
+          border-color: transparent;
+          @extend %smooth-hover;
+          &:hover, &:active {
+            border-color: #6ddbf2;
+          }
+        }
       }
   
       .cc-cp-body-content{
@@ -66,6 +95,7 @@ a#open_preferences_center {
       .cc-cp-foot{
         background: #101010;
         .cc-cp-foot-save{
+          @extend %smooth-hover;
           background-color: #6ddbf2;
         }
       }

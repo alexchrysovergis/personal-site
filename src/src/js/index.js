@@ -5,9 +5,9 @@ var mySwiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   speed: 600,
-  autoplay: {
-    delay: 6000,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  // },
 
   // If we need pagination
   pagination: {
@@ -21,3 +21,22 @@ var mySwiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// hover hue change
+
+$('.slide-cta').hover(
+  function() {
+    // Mouse enters the element
+    $('body').css({
+      'filter': 'hue-rotate(90deg)',
+      '-webkit-filter': 'hue-rotate(90deg)'
+    });
+  },
+  function() {
+    // Mouse leaves the element
+    $('body').css({
+      'filter': '',
+      '-webkit-filter': ''
+    });
+  }
+);
