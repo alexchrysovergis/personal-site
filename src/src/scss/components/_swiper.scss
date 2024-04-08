@@ -23,33 +23,18 @@
     }
   
     .slide-heading{
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       color: #fff;
-      @include clamp('font-size', 20px, 5rem, 3.52vw);
+      @include clamp('font-size', 2rem, 5rem, 3.52vw);
       background-color: rgba(16, 16, 16, .7019607843);
       padding: 1rem;
-      display: block;
       width: 100vw;
-      margin: 0;
-      height: 7.4rem;
     }
 
     .slide-text {
       font-family: 'Asty-Thin';
-      position: absolute;
-      top: 52%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       color: #fff;
-      @include clamp('font-size', 16px, 3rem, 3.52vw);
+      @include clamp('font-size', 1.25rem, 3rem, 3.52vw);
       padding: 1rem;
-      display: block;
-      width: 100vw;
-      margin: 0;
-      height: 1rem;
     }
 
     .slide-cta {
@@ -57,19 +42,10 @@
       -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s;
       -o-transition: filter 0.5s ease-in-out, opacity 0.5s;
       transition: filter 0.5s ease-in-out, opacity 0.5s;
-      position: absolute;
-      top: 65%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      @include clamp('font-size', 14px, 1.75rem, 3.52vw);
+      @include clamp('font-size', 1rem, 1.75rem, 3.52vw);
       padding: 1rem 3rem;
-      display: block;
-      margin: 0;
-      height: 4.4rem;
-      background-attachment: fixed;
       background-color: #6ddbf2;
       color: #000;
-      z-index: 2;
       border-radius: 50px;
       opacity: .7;
       text-decoration: none;
