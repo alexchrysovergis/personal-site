@@ -13,11 +13,13 @@
                 $text = get_sub_field('home_banner_text');
                 $cta = get_sub_field('home_banner_cta');
             ?>
-        <div class="swiper-slide">
-          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-          <h2 class="slide-heading"><?php echo esc_html($headline); ?></h2>
-          <p class="slide-text"><?php echo esc_html($text); ?></p>
-          <a href="<?php echo site_url("/about") ?>" class="slide-cta"><?php echo esc_html($cta); ?></a>
+        <div class="swiper-slide vh-100">
+          <img class="position-absolute start-0 z-0 vh-100" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+          <div class="text-overlay d-flex flex-column justify-content-center align-items-center position-relative z-1 vh-100">
+            <h2 class="slide-heading"><?php echo esc_html($headline); ?></h2>
+            <p class="slide-text"><?php echo esc_html($text); ?></p>
+            <a href="<?php echo site_url("/about") ?>" class="slide-cta"><?php echo esc_html($cta); ?></a>
+          </div>
         </div>
         <?php endwhile; ?>
       </div>
