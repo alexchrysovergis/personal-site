@@ -54,17 +54,9 @@
   }
   
   //buttons styles
-  
-  .swiper-button-next:after, .swiper-button-prev:after{
-    color: white;
-  }
-  
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-    margin-left: 1.75rem;
-  }
-  
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-    margin-right: 1.75rem;
+  .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
+    @extend %smooth-hover;
+    bottom: 1.5rem;
   }
   
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {

@@ -27,14 +27,14 @@ var mySwiper = new Swiper('.swiper', {
 $('.slide-cta').hover(
   function() {
     // Mouse enters the element
-    $('body').css({
+    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').css({
       'filter': 'hue-rotate(90deg)',
       '-webkit-filter': 'hue-rotate(90deg)'
     });
   },
   function() {
     // Mouse leaves the element
-    $('body').css({
+    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').css({
       'filter': '',
       '-webkit-filter': ''
     });

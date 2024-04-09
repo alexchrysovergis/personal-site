@@ -15,7 +15,7 @@
   <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
   <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
   <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-  <a href="#" class="position-fixed" id="open_preferences_center"><i class="material-icons cookie position-absolute">cookie</i></a>
+  <a class="position-fixed" id="open_preferences_center"><i class="material-icons cookie position-absolute">cookie</i></a>
   
 </head>
 <body>
