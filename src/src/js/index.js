@@ -27,16 +27,25 @@ var mySwiper = new Swiper('.swiper', {
 $('.slide-cta').hover(
   function() {
     // Mouse enters the element
-    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').css({
-      'filter': 'hue-rotate(90deg)',
-      '-webkit-filter': 'hue-rotate(90deg)'
-    });
+    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').addClass('hue-rotate-effect');
   },
   function() {
     // Mouse leaves the element
-    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').css({
-      'filter': '',
-      '-webkit-filter': ''
-    });
+    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').removeClass('hue-rotate-effect');
+  }
+);
+
+// black and white change
+
+
+// Add classes for hover styles
+$('.swiper').hover(
+  function() {
+    // Mouse enters the element
+    $('.swiper-slide img').addClass('hovered');
+  },
+  function() {
+    // Mouse leaves the element
+    $('.swiper-slide img').removeClass('hovered');
   }
 );

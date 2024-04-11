@@ -13,6 +13,10 @@ body{
   margin: 0;
   @extend %smooth-hover;
   font-family: 'Asty-Regular', sans-serif;
+  .hue-rotate-effect {
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
+  }
 
   h1,h2{
     font-family: 'Asty-Bold', sans-serif;
