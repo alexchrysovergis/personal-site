@@ -3,7 +3,7 @@
   font-family: 'Asty-Regular', sans-serif;
   position: fixed;
   bottom: 0;
-  background: #101010;
+  background: map-get($theme-colors, secondary);
   width: 100vw;
   .cc-nb-title-container{
     #cc-nb-title {
@@ -14,12 +14,12 @@
   .cc-nb-buttons-container{
     .cc-nb-okagree {
       @extend %smooth-hover;
-      background-color: #6ddbf2;
+      background-color: map-get($theme-colors, primary);
     }
     .cc-nb-reject {
       @extend %smooth-hover;
-      color: #101010;
-      background-color: #6ddbf2;
+      color: map-get($theme-colors, secondary);
+      background-color: map-get($theme-colors, primary);
     }
   }
 }
@@ -31,7 +31,7 @@ a#open_preferences_center {
   left: 1.25rem;
   width: 50px;
   height: 50px;
-  background-color: #6ddbf2;
+  background-color: map-get($theme-colors, primary);
   color: black;
   z-index: 2;
   border-radius: 50%;
@@ -54,50 +54,50 @@ a#open_preferences_center {
   .termsfeed-com---pc-dialog{
     .cc-pc-container{
       padding: 2rem;
-      background: #101010;
+      background: map-get($theme-colors, secondary);
       border-radius: 25px;
       .cc-pc-head{
-        background: #101010;
+        background: map-get($theme-colors, secondary);
         .cc-pc-head-close{
           border-color: transparent;
           @extend %smooth-hover;
           &:hover, &:active {
-            border-color: #6ddbf2;
+            border-color: map-get($theme-colors, primary);
           }
         }
 
         .cc-pc-head-lang-select{
-          color: white;
-          background: #101010;
+          color: map-get($theme-colors, color-white);
+          background: map-get($theme-colors, secondary);
           border-color: transparent;
           @extend %smooth-hover;
           &:hover, &:active {
-            border-color: #6ddbf2;
+            border-color: map-get($theme-colors, primary);
           }
         }
       }
   
       .cc-cp-body-content{
-          background: #101010 !important; // can't override a third party !important rule so another !important had to be used
+          background: map-get($theme-colors, secondary) !important; // can't override a third party !important rule so another !important had to be used
         .cc-cp-body-content-entry{
-          background: #101010;
+          background: map-get($theme-colors, secondary);
         }
       }
       .cc-cp-body-tabs{
-        background: #101010;
+        background: map-get($theme-colors, secondary);
         .cc-cp-body-tabs-item-link{
-          background: #101010;
+          background: map-get($theme-colors, secondary);
         }
         .cc-cp-body-tabs-item{
-          background: #101010;
+          background: map-get($theme-colors, secondary);
         }
       }
   
       .cc-cp-foot{
-        background: #101010;
+        background: map-get($theme-colors, secondary);
         .cc-cp-foot-save{
           @extend %smooth-hover;
-          background-color: #6ddbf2;
+          background-color: map-get($theme-colors, primary);
         }
       }
     }

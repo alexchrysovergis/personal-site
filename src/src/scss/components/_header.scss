@@ -1,11 +1,11 @@
 .main-menu{
-  background-color: #101010;
+  background-color: map-get($theme-colors, secondary);
   min-height: 10vh;
   a{
     @extend %smooth-hover;
-    color: #fff;
+    color: map-get($theme-colors, color-white);
     &:hover{
-      color:  #6ddbf2;
+      color:  map-get($theme-colors, primary);
     }
   }
   

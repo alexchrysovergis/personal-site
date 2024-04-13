@@ -18,6 +18,13 @@ body{
     -webkit-filter: hue-rotate(90deg);
   }
 
+  a{
+    @extend %smooth-hover;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
   h1,h2{
     font-family: 'Asty-Bold', sans-serif;
   }
