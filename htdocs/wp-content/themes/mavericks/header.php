@@ -18,8 +18,8 @@
   <a class="position-fixed" id="open_preferences_center"><i class="material-icons cookie position-absolute">cookie</i></a>
   
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light main-menu" role="navigation">
+<body class="overflow-hidden">
+<nav class="navbar navbar-expand-md navbar-dark main-menu" role="navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

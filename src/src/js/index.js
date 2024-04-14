@@ -49,3 +49,11 @@ $('.swiper').hover(
     $('.swiper-slide img').removeClass('hovered');
   }
 );
+
+// for overflow issues (temporary)
+
+$(window).on('load', function() {
+  setTimeout(function() {
+    $('body').removeClass('overflow-hidden');
+  }, 1000);
+});
