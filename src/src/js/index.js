@@ -54,6 +54,29 @@ $('.swiper').hover(
 
 $(window).on('load', function() {
   setTimeout(function() {
-    $('body').removeClass('overflow-hidden');
-  }, 1000);
+    $('html').removeClass('overflow-hidden');
+  }, 100);
+});
+
+// about interaction
+
+let headings = $('#introduction-heading, #skills-heading, #miscelaneous-heading');
+
+    headings.on('click', function() {
+
+        // Remove 'current-arrow' class from all arrows
+        $('.arrow').removeClass('current-arrow');
+
+        // Add 'current-arrow' class to the arrow within the clicked heading
+        $(this).find('.arrow').addClass('current-arrow');
+
+    headings.removeClass('current-item');
+    
+    $(this).addClass('current-item');
+
+
+    $('#introduction-paragraph, #skills-paragraph, #miscelaneous-paragraph').addClass('d-none');
+    
+    let targetParagraph = $($(this).data('target'));
+    targetParagraph.removeClass('d-none');
 });

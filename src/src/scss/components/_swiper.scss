@@ -1,63 +1,65 @@
-.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
-  .swiper-slide {
-    max-height: 90vh;
+.homepage-slider{
+  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+    .swiper-slide {
+      max-height: 90vh;
+      
+      img {
+        @include common-transition;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+      }
+  
+      .hovered{
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+      }
+      
     
-    img {
+      .slide-heading{
+        color: map-get($theme-colors, color-white);
+        @include clamp('font-size', 2rem, 5rem, 3.52vw);
+        background-color: rgba(16, 16, 16, .7019607843);
+      }
+  
+      .slide-text {
+        font-family: 'Asty-Thin';
+        color: map-get($theme-colors, color-white);
+        @include clamp('font-size', 1.25rem, 3rem, 3.52vw);
+      }
+  
+      .slide-cta {
+        @include common-transition;
+        @include clamp('font-size', 1rem, 1.75rem, 3.52vw);
+        background-color: map-get($theme-colors, primary);
+        color: map-get($theme-colors, secondary);
+        border-radius: 50px;
+        opacity: .7;
+        letter-spacing: .1rem;
+      }
+    }
+    
+    //buttons styles
+    .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
       @include common-transition;
-      filter: grayscale(1);
-      -webkit-filter: grayscale(1);
-    }
-
-    .hovered{
-      filter: grayscale(0);
-      -webkit-filter: grayscale(0);
+      bottom: 1.5rem;
     }
     
-  
-    .slide-heading{
-      color: map-get($theme-colors, color-white);
-      @include clamp('font-size', 2rem, 5rem, 3.52vw);
-      background-color: rgba(16, 16, 16, .7019607843);
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
     }
-
-    .slide-text {
-      font-family: 'Asty-Thin';
-      color: map-get($theme-colors, color-white);
-      @include clamp('font-size', 1.25rem, 3rem, 3.52vw);
+      
+    .swiper-pagination-bullet {
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px));
+      background: map-get($theme-colors, color-white);
+      opacity: var(--swiper-pagination-bullet-inactive-opacity, .7);
+      border: solid 2px map-get($theme-colors, color-white);
     }
-
-    .slide-cta {
-      @include common-transition;
-      @include clamp('font-size', 1rem, 1.75rem, 3.52vw);
-      background-color: map-get($theme-colors, primary);
-      color: map-get($theme-colors, secondary);
-      border-radius: 50px;
-      opacity: .7;
-      letter-spacing: .1rem;
+  
+    .swiper-pagination-bullet-active {
+      background: transparent;
+      opacity: var(--swiper-pagination-bullet-opacity, .7);
+      border: solid 2px map-get($theme-colors, primary);
     }
-  }
-  
-  //buttons styles
-  .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
-    @include common-transition;
-    bottom: 1.5rem;
-  }
-  
-  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
-  }
-    
-  .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px));
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px));
-    background: map-get($theme-colors, color-white);
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, .7);
-    border: solid 2px map-get($theme-colors, color-white);
-  }
-
-  .swiper-pagination-bullet-active {
-    background: transparent;
-    opacity: var(--swiper-pagination-bullet-opacity, .7);
-    border: solid 2px map-get($theme-colors, primary);
   }
 }

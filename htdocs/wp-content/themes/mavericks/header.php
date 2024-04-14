@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,8 @@
   <a class="position-fixed" id="open_preferences_center"><i class="material-icons cookie position-absolute">cookie</i></a>
   
 </head>
-<body class="overflow-hidden">
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <nav class="navbar navbar-expand-md navbar-dark main-menu" role="navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
@@ -41,4 +42,4 @@
     </div>
 </nav>
 
-<?php wp_body_open(); ?>
+<main class="main">

@@ -8,6 +8,7 @@
 @import 'components/frontpage';
 @import 'components/swiper';
 @import 'components/cookie-consent';
+@import 'components/about';
 
 body{
   margin: 0;
@@ -16,6 +17,10 @@ body{
   .hue-rotate-effect {
     filter: hue-rotate(90deg);
     -webkit-filter: hue-rotate(90deg);
+  }
+
+  main{
+    background: map-get($theme-colors, secondary);
   }
 
   a{

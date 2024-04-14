@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container-fluid p-0">
+<section class="homepage-slider container-fluid p-0">
   <!-- Slider main container -->
   <?php if( have_rows('home_banner_repeater') ): ?>
     <div class="swiper">
@@ -26,7 +26,7 @@
       <div class="swiper-pagination slideshow0 swiper-pagination-clickable swiper-pagination-bullets">
         <span class="swiper-pagination-bullet"></span>
       </div>
-  </div>
+  </section>
   <?php endif; ?>
 
 <?php get_footer(); ?>
