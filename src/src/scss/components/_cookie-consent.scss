@@ -13,11 +13,11 @@
 
   .cc-nb-buttons-container{
     .cc-nb-okagree {
-      @extend %smooth-hover;
+      @include common-transition;
       background-color: map-get($theme-colors, primary);
     }
     .cc-nb-reject {
-      @extend %smooth-hover;
+      @include common-transition;
       color: map-get($theme-colors, secondary);
       background-color: map-get($theme-colors, primary);
     }
@@ -25,7 +25,7 @@
 }
 
 a#open_preferences_center {
-  @extend %smooth-hover;
+  @include common-transition;
   cursor: pointer;
   bottom: 1.5rem;
   left: 1.25rem;
@@ -35,9 +35,6 @@ a#open_preferences_center {
   color: black;
   z-index: 2;
   border-radius: 50%;
-  // text-indent: 100%;
-  // white-space: nowrap;
-  // overflow: hidden;
   opacity: 0.7;
 
   &:hover{

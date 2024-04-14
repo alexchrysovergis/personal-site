@@ -37,13 +37,6 @@
 
 @include media-breakpoint-down(lg) {
   /* Your styles for lg and down go here */
-    
-  /*swiper responsive*/
-    .swiper-slide {
-      img {
-        min-height: 100vh;
-      }
-    }
 }
 
 @include media-breakpoint-between(lg, xl) {

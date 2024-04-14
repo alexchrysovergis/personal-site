@@ -13,3 +13,10 @@
     #{$property}:clamp($min-size, $scaler, $max-size) clamp($min-size-left, $scaler-left, $max-size-left);
   }
 }
+
+@mixin common-transition{
+  -moz-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}

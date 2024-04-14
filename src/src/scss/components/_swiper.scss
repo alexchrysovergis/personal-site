@@ -1,18 +1,9 @@
 .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
   .swiper-slide {
     max-height: 90vh;
-    position: relative;
-    text-align: center;
     
     img {
-      will-change: transform;
-      -moz-transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s;
-      -webkit-transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s;
-      -o-transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s;
-      transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      @include common-transition;
       filter: grayscale(1);
       -webkit-filter: grayscale(1);
     }
@@ -27,36 +18,28 @@
       color: map-get($theme-colors, color-white);
       @include clamp('font-size', 2rem, 5rem, 3.52vw);
       background-color: rgba(16, 16, 16, .7019607843);
-      padding: 1rem;
-      width: 100vw;
     }
 
     .slide-text {
       font-family: 'Asty-Thin';
       color: map-get($theme-colors, color-white);
       @include clamp('font-size', 1.25rem, 3rem, 3.52vw);
-      padding: 1rem;
     }
 
     .slide-cta {
-      -moz-transition: filter 0.5s ease-in-out, opacity 0.5s;
-      -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s;
-      -o-transition: filter 0.5s ease-in-out, opacity 0.5s;
-      transition: filter 0.5s ease-in-out, opacity 0.5s;
+      @include common-transition;
       @include clamp('font-size', 1rem, 1.75rem, 3.52vw);
-      padding: 1rem 3rem;
       background-color: map-get($theme-colors, primary);
       color: map-get($theme-colors, secondary);
       border-radius: 50px;
       opacity: .7;
-      text-decoration: none;
       letter-spacing: .1rem;
     }
   }
   
   //buttons styles
   .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
-    @extend %smooth-hover;
+    @include common-transition;
     bottom: 1.5rem;
   }
   
