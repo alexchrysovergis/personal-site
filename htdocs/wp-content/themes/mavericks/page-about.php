@@ -4,28 +4,34 @@
   <section class="about-title container-fluid col-12 p-5 pb-3">
     <h1>Learn More About Alex.</h1>
   </section>
-
   <section class="about-arrow-headings container-fluid p-5 pt-3">
     <div class="row">
       <div class="col-12 col-md-6">
-        <h2 id="introduction-heading" class="py-3" data-target="#introduction-paragraph">
+        <?php if( have_rows('about_repeater') ): ?>
+          <?php while( have_rows('about_repeater') ): the_row();
+            $about_title = get_sub_field('about_title');
+            $about_paragraph = get_sub_field('about_paragraph');
+            $about_index = get_row_index();
+          ?>
+        <h2 id="heading-<?php echo $about_index; ?>" class="py-3" data-target="#paragraph-<?php echo $about_index; ?>">
           <i class="material-icons arrow">keyboard_arrow_right</i>
-          Who Am I?
+          <?php echo esc_html($about_title); ?>
         </h2>
-        <h2 id="skills-heading" class="py-3" data-target="#skills-paragraph">
-          <i class="material-icons arrow">keyboard_arrow_right</i>
-          What Do I Do?
-        </h2>
-        <h2 id="miscelaneous-heading" class="py-3" data-target="#miscelaneous-paragraph">
-          <i class="material-icons arrow">keyboard_arrow_right</i>
-          Miscelaneous
-        </h2>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
 
       <div class="col-12 col-md-6">
-        <p id="introduction-paragraph" class="py-3 d-none">Howdy, I'm Alex I'm just a guy who likes to code sometimes.</p>
-        <p id="skills-paragraph" class="py-3 d-none">I'm an avid user of HTML, CSS, JS as well as PHP. I mostly work with CMS platforms such as WordPress and Opencart.</p>
-        <p id="miscelaneous-paragraph" class="py-3 d-none">Miscelaneous</p>
+        <?php if( have_rows('about_repeater') ): ?>
+          <?php while( have_rows('about_repeater') ): the_row();
+            $about_paragraph = get_sub_field('about_paragraph');
+            $about_index = get_row_index(); // ACF function to get the current row number
+          ?>
+         <p id="paragraph-<?php echo $about_index; ?>" class="py-3 d-none">
+            <?php echo esc_html($about_paragraph); ?>
+          </p>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
 
     </div>

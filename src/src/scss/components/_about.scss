@@ -11,7 +11,7 @@
 
     .about-arrow-headings{
       color: map-get($theme-colors, color-white);
-      #introduction-heading, #skills-heading, #miscelaneous-heading{
+      h2{
         @extend %smooth-hover;
         cursor: pointer;
         font-family: 'Asty-Regular';
@@ -37,8 +37,15 @@
         }
       }
 
-      #introduction-paragraph, #skills-paragraph, #miscelaneous-paragraph{
+      p{
+        @extend %smooth-hover;
+        @include fade-in;
         @include clamp('font-size', .75rem, 2rem, 3.52vw);
+        opacity: 0;
+
+        &.is-visible {
+          animation: fadeIn 0.5s ease forwards; // 'forwards' keeps the final state
+        }
       }
     }
   }
