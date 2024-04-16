@@ -12,6 +12,7 @@
     .about-arrow-headings{
       color: map-get($theme-colors, color-white);
       h2{
+        width: fit-content;
         @extend %smooth-hover;
         cursor: pointer;
         font-family: 'Asty-Regular';

@@ -24,14 +24,14 @@ var mySwiper = new Swiper('.swiper', {
 
 // hover hue change
 
-$('.slide-cta').hover(
+$('.slide-cta, .about-arrow-headings h2').hover(
   function() {
     // Mouse enters the element
-    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').addClass('hue-rotate-effect');
+    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow').addClass('hue-rotate-effect');
   },
   function() {
     // Mouse leaves the element
-    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject').removeClass('hue-rotate-effect');
+    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow').removeClass('hue-rotate-effect');
   }
 );
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
       $('.about-arrow-headings p').addClass('d-none');
       
-      let targetParagraph = $($(this).data('target')).addClass('is-visible');;
+      let targetParagraph = $($(this).data('target')).addClass('is-visible');
       targetParagraph.removeClass('d-none');
   });
 });

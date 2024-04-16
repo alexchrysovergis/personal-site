@@ -1,0 +1,9 @@
+.blog{
+  .blog-section{
+    min-height: 90vh;
+
+    .post-title{
+      color: map-get($theme-colors, primary);
+    }
+  }
+}
