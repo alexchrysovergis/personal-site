@@ -1,7 +1,28 @@
 .blog{
-  .blog-section{
-    min-height: 90vh;
+  background: map-get($theme-colors, secondary);
+  min-height: 100vh;
+  .rolling-text-section{
+    min-height: 10vh;
+    hr{
+      min-height: unset;
+    }
 
+    .rolling-text {
+      @include clamp('font-size', 2rem, 5rem, 3.52vw);
+      width: 100%;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: rolling 20s linear infinite;
+    }
+  
+    @keyframes rolling{
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+  }
+
+  .blog-section{
+    min-height: 72.5vh;
     .post-title{
       color: map-get($theme-colors, primary);
     }

@@ -11,6 +11,11 @@ $news = new WP_Query(array(
     'paged' => $paged        
 ));
 ?>
+<section class="rolling-text-section text-white d-flex flex-column">
+		<hr class="vr w-100">
+			<div class="rolling-text">Learn About Alex's Latest Shenanigans.</div>
+		<hr class="vr w-100">
+</section>
 
 <section class="blog-section container-fluid px-5 py-3 text-light">
 	<div class="row">
