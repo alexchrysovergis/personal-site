@@ -5,7 +5,7 @@
     @extend %smooth-hover;
     color: map-get($theme-colors, color-white);
     &:hover{
-      color:  map-get($theme-colors, primary);
+      color: map-get($theme-colors, primary);
     }
   }
   

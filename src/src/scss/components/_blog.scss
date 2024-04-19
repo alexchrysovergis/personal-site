@@ -25,6 +25,18 @@
     min-height: 72.5vh;
     .post-title{
       color: map-get($theme-colors, primary);
+      @include clamp('font-size', 1.5rem, 3rem, 3.52vw);
+    }
+    p{
+      @include clamp('font-size', 1rem, 1.5rem, 3.52vw);
+    }
+
+    .pagination .blog-arrow{
+      @include clamp('font-size', 1.5rem, 3rem, 3.52vw);
+      color: map-get($theme-colors, primary);
+      border: map-get($theme-colors, primary) solid;
+      border-radius: 50px;
+      padding: .7rem;
     }
   }
 }

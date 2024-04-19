@@ -1,4 +1,5 @@
 <?php
+
 function mavericks_styles() {
   wp_enqueue_style( 'default-css', get_stylesheet_uri() );
   wp_enqueue_style('minified-sass', get_theme_file_uri('/dist/css/styles.min.css') );
@@ -30,6 +31,15 @@ function add_type_attribute($tag, $handle, $src) {
   }
   return $tag;
 }
+
+//excerpt
+
+function new_excerpt_more($more) {
+  global $post;
+  return '... <a href="'. get_permalink($post->ID) . '">Read More</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 add_filter('script_loader_tag', 'add_type_attribute', 10, 3);
 
 add_action( 'wp_enqueue_scripts', 'mavericks_scripts' );
