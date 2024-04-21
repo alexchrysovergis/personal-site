@@ -38,6 +38,18 @@ function new_excerpt_more($more) {
   global $post;
   return '... <a href="'. get_permalink($post->ID) . '">Read More</a>';
 }
+
+// hook so the custom query doesn't cause a conflict between how many posts you want to show
+
+function customize_posts_per_page($query) {
+  if (!is_admin() && $query->is_main_query()) {
+      if (is_category('news')) {
+          $query->set('posts_per_page', 2);
+      }
+  }
+}
+add_action('pre_get_posts', 'customize_posts_per_page');
+
 add_filter('excerpt_more', 'new_excerpt_more');
 
 add_filter('script_loader_tag', 'add_type_attribute', 10, 3);

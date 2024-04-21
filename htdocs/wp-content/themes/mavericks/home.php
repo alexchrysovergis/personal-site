@@ -4,8 +4,6 @@
 
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-echo 'We are on the page: '. $paged;
-
 $news = new WP_Query(array(
     'post_type' => 'post',
     'category_name' => 'news',
@@ -30,10 +28,8 @@ $news = new WP_Query(array(
 					<span><?php the_time('m/Y'); ?></span>
 					<p><?php the_excerpt(); ?></p>
 				<?php endwhile; ?>
-				<div class="col-6 d-flex justify-content-start pagination pagination-left px-5 pt-5 mt-5">
+				<div class="col-12 d-flex justify-content-around pagination pagination-left px-5 pt-5 mt-5">
 					<?php previous_posts_link('<i class="material-icons blog-arrow">keyboard_arrow_left</i>'); ?>
-				</div>
-				<div class="col-6 d-flex justify-content-end pagination pagination-right px-5 pt-5 mt-5">
 					<?php next_posts_link('<i class="material-icons blog-arrow">keyboard_arrow_right</i>', $news->max_num_pages); ?>
 				</div>
 					<?php wp_reset_postdata(); ?>

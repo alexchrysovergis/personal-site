@@ -24,14 +24,14 @@ var mySwiper = new Swiper('.swiper', {
 
 // hover hue change
 
-$('.slide-cta, .about-arrow-headings h2').hover(
+$('.slide-cta, .about-arrow-headings h2, input[type="submit"]').hover(
   function() {
     // Mouse enters the element
-    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow').addClass('hue-rotate-effect');
+    $('.alexx-website-logo , #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow, input[type="submit"]').addClass('hue-rotate-effect');
   },
   function() {
     // Mouse leaves the element
-    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow').removeClass('hue-rotate-effect');
+    $('.alexx-website-logo, #open_preferences_center, .slide-cta, .swiper-pagination, .cc-nb-okagree, .cc-nb-reject, .arrow, input[type="submit"]').removeClass('hue-rotate-effect');
   }
 );
 
