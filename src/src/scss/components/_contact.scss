@@ -1,0 +1,46 @@
+.contact-section{
+  min-height: 90vh;
+
+  .contact-title{
+    h1{
+      @include clamp('font-size', 7vw, 40rem, 3.52vw);
+      color: map-get($theme-colors, color-white);
+      text-align: center;
+    }
+  }
+
+  label{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  input, textarea {
+    display: block;
+    border-radius: 75px;
+    border: none;
+    padding: 1.75rem 2.5rem;
+    margin: 3rem auto;
+    width: 70%;
+    box-shadow: none;
+    outline: none;
+  }
+
+  textarea{
+    resize: none;
+    height: 15rem;
+  }
+
+  input[type="submit"]{
+    width: fit-content;
+    padding: 1rem 3rem;
+    @include common-transition;
+    @include clamp('font-size', 1rem, 1.75rem, 3.52vw);
+    background-color: map-get($theme-colors, primary);
+    color: map-get($theme-colors, secondary);
+    border-radius: 50px;
+    opacity: .7;
+    letter-spacing: .1rem;
+  }
+}

@@ -11,11 +11,28 @@
 @import 'components/about';
 @import 'components/blog';
 @import 'components/post';
+@import 'components/contact';
+
+html{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
 
 body{
   margin: 0;
   @extend %smooth-hover;
   font-family: 'Asty-Regular', sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
   .hue-rotate-effect {
     filter: hue-rotate(90deg);
     -webkit-filter: hue-rotate(90deg);

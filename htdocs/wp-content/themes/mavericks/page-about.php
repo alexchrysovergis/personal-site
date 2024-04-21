@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="about-section">
-  <section class="about-title container-fluid col-12 p-5 pb-3">
+  <section class="about-title container-fluid p-5 pb-3">
     <h1>Learn More About Alex.</h1>
   </section>
   <section class="about-arrow-headings container-fluid p-5 pt-3">
