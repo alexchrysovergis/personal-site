@@ -24,13 +24,16 @@ $news = new WP_Query(array(
 		<div class="col-12">
 			<?php if($news->have_posts()): ?>
     		<?php while($news->have_posts()): $news->the_post(); ?>
-					<h2><a class="post-title text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<h2><a class="post-title text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); 
+					the_post_thumbnail( 'medium_large' );
+					?></a></h2>
+					
 					<span><?php the_time('m/Y'); ?></span>
 					<p><?php the_excerpt(); ?></p>
 				<?php endwhile; ?>
 				<div class="col-12 d-flex justify-content-around pagination pagination-left px-5 pt-5 mt-5">
-					<?php previous_posts_link('<i class="material-icons blog-arrow">keyboard_arrow_left</i>'); ?>
-					<?php next_posts_link('<i class="material-icons blog-arrow">keyboard_arrow_right</i>', $news->max_num_pages); ?>
+					<?php previous_posts_link('<i class="material-icons blog-arrow left-arrow">keyboard_arrow_left</i>'); ?>
+					<?php next_posts_link('<i class="material-icons blog-arrow right-arrow">keyboard_arrow_right</i>', $news->max_num_pages); ?>
 				</div>
 					<?php wp_reset_postdata(); ?>
 				<?php else: ?>

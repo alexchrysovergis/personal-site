@@ -31,12 +31,18 @@
         -webkit-filter: hue-rotate(90deg);
       }
     }
+
+    img{
+      display: block;
+      margin: 3rem 0;
+    }
+
     p{
       @include clamp('font-size', 1rem, 1.5rem, 3.52vw);
     }
 
     .pagination .blog-arrow{
-      @include common-transition;
+      @extend %smooth-hover;
       @include clamp('font-size', 1.5rem, 3rem, 3.52vw);
       color: map-get($theme-colors, primary);
       border: map-get($theme-colors, primary) solid;
@@ -46,6 +52,18 @@
       &:hover{
         filter: hue-rotate(90deg);
         -webkit-filter: hue-rotate(90deg);
+      }
+    }
+
+    .right-arrow{
+      &:hover{
+        transform: translateX(1rem);
+      }
+    }
+
+    .left-arrow{
+      &:hover{
+        transform: translateX(-1rem);
       }
     }
 
