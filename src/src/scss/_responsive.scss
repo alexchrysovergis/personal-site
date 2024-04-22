@@ -22,12 +22,9 @@
   /* Your styles for md and up go here */
 }
 
-@include media-breakpoint-down(md) {
-  /* Your styles for md and down go here */
-}
-
 @include media-breakpoint-between(md, lg) {
   /* Your styles between md and lg (inclusive) go here */
+
 }
 
 // Large (lg) Breakpoint
@@ -37,6 +34,16 @@
 
 @include media-breakpoint-down(lg) {
   /* Your styles for lg and down go here */
+
+    // single post
+
+    .single.single-post{
+      .single-post-section{
+        img{
+          width: 75%;
+        }
+      }
+    }
 }
 
 @include media-breakpoint-between(lg, xl) {
@@ -46,4 +53,23 @@
 // Extra Large (xl) Breakpoint
 @include media-breakpoint-up(xl) {
   /* Your styles for xl and up go here */
+}
+
+@include media-breakpoint-down(md) {
+  /* Your styles for md and down go here */
+
+// single post
+
+  .single.single-post{
+    .single-post-section{
+      img{
+        width: 100%;
+      }
+
+      hr{
+        margin: 3rem 0;
+      }
+    }
+  }
+
 }

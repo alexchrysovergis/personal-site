@@ -3,7 +3,6 @@
 @import 'components/fonts';
 @import 'variables';
 @import 'mixins';
-@import 'responsive';
 @import 'components/header';
 @import 'components/frontpage';
 @import 'components/swiper';
@@ -13,6 +12,7 @@
 @import 'components/post';
 @import 'components/contact';
 @import 'components/privacy';
+@import 'responsive';
 
 html{
   -ms-overflow-style: none;

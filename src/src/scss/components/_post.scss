@@ -1,5 +1,24 @@
 .single.single-post{
   .single-post-section{
     min-height: 90vh;
+
+    img{
+      display: block;
+      margin: 3rem auto;
+      width: 55%;
+      height: auto;
+    }
+
+    p{
+      @include clamp('font-size', 1.25rem, 2rem, 3.52vw);
+      padding: 0 3rem;
+    }
+
+    hr {
+      margin: 5rem 0;
+      border: 0;
+      border-top: 0.15rem solid map-get($theme-colors, primary);
+      opacity: .5;
+    }
   }
 }
