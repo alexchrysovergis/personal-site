@@ -17,11 +17,12 @@ function css() {
 
 function js() {
     return src([
+        'node_modules/mmenu-light/dist/mmenu-light.js',
+        'node_modules/mmenu-light/dist/mmenu-light.polyfills.js',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/@popperjs/core/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/swiper/swiper-bundle.min.js',
-        // 'node_modules/mmenu-js/src/mmenu.js', // for later
         './src/js/*.js'  // minify the custom js file
     ])
         .pipe(concat('scripts.min.js')) // concat the js into one file

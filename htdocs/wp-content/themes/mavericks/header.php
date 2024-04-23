@@ -19,27 +19,25 @@
   
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<nav class="navbar navbar-expand-md navbar-dark main-menu" role="navigation">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <?php
-        wp_nav_menu( array(
-            'theme_location'    => 'primary',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'navbarNav',
-            'menu_class'        => 'nav navbar-nav',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker(),
-        ) );
-        ?>
-        
-    </div>
+
+<header class="container-fluid main-menu d-flex align-items-center">
+
+<a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
+
+<div class="ham-container d-flex justify-content-end vw-100">
+  <a class="mx-3" href="#my-menu"><i class="material-icons menu-icon">menu</i></a>
+</div>
+
+<nav id="my-menu">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
 </nav>
+</header>
+
+<?php wp_body_open(); ?>
 
 <main class="main">

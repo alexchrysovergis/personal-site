@@ -7,6 +7,10 @@
     &:hover{
       color: map-get($theme-colors, primary);
     }
+
+    .menu-icon{
+      font-size: 3rem;
+    }
   }
   
   .alexx-website-logo{

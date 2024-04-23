@@ -13,13 +13,6 @@ function mavericks_features() {
   add_theme_support( 'post-thumbnails' );
 }
 
-/**
- * Register Custom Navigation Walker
- */
-function register_navwalker(){
-	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-}
-
 register_nav_menus( array(
   'primary' => __( 'Primary Menu', 'mavericks' ),
 ) );
@@ -57,7 +50,6 @@ add_filter('script_loader_tag', 'add_type_attribute', 10, 3);
 add_action( 'wp_enqueue_scripts', 'mavericks_scripts' );
 add_action( 'wp_enqueue_scripts', 'mavericks_styles' );
 add_action( 'after_setup_theme', 'mavericks_features' );
-add_action( 'after_setup_theme', 'register_navwalker' );
 
 add_filter( 'auto_update_plugin', '__return_false' );
 add_filter( 'auto_update_theme', '__return_false' );
