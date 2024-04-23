@@ -20,7 +20,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header class="container-fluid main-menu d-flex align-items-center">
+<header class="container-fluid main-menu d-flex align-items-center position-relative">
 
 <a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
 
@@ -29,12 +29,14 @@
 </div>
 
 <nav id="my-menu">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/services">Services</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
+<?php
+    wp_nav_menu( array(
+      'theme_location' => 'primary',
+      'container' => false,
+      'items_wrap' => '<ul>%3$s</ul>',
+      'fallback_cb' => false
+    ) );
+  ?>
 </nav>
 </header>
 
