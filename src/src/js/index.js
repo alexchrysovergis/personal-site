@@ -1,21 +1,27 @@
 //mmenu
 
-document.addEventListener(
-  "DOMContentLoaded", () => {
-      const menu = new MmenuLight(
-          document.querySelector( "#my-menu" )
-      );
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = new MmenuLight(document.querySelector("#my-menu"));
+  const navigator = menu.navigation();
+  const drawer = menu.offcanvas();
+  
+  const menuToggle = document.querySelector('a[href="#my-menu"]');
+  const icon = menuToggle.querySelector('.menu-icon');
 
-      const navigator = menu.navigation();
-      const drawer = menu.offcanvas();
-
-      document.querySelector( 'a[href="#my-menu"]' )
-          .addEventListener( 'click', ( evnt ) => {
-              evnt.preventDefault();
-              drawer.open();
-          });
-  }
-);
+  
+  menuToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (menuToggle.classList.contains('is-active')) {
+          drawer.close();
+          menuToggle.classList.remove('is-active');
+          setTimeout(() => icon.textContent = 'menu', 150); // Delay icon change to allow opacity transition
+      } else {
+          drawer.open();
+          menuToggle.classList.add('is-active');
+          setTimeout(() => icon.textContent = 'close', 150); // Delay icon change to allow opacity transition
+      }
+  });
+});
 
 //swiper
 

@@ -9,10 +9,13 @@
       color: map-get($theme-colors, primary);
     }
 
-    .menu-icon{
+    .menu-icon {
       font-size: 3rem;
-    }
+      display: inline-block;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transform-origin: center;
   }
+}
   
   .alexx-website-logo{
     width: 50px;
@@ -44,6 +47,10 @@
   color: map-get($theme-colors, color-white);
 }
 
+.mm-spn li{
+  width: min-content;
+}
+
 .mm-spn li:before {
   display: none;
   content: "";
@@ -70,5 +77,9 @@
   top: auto;
   bottom: 0;
   height: 90vh;
+}
+
+.mm-ocd__backdrop {
+  display: none;
 }
 

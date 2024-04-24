@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="overflow-hidden">
 <head>
+  <style>
+    .is-active .menu-icon {
+  transform: rotate(90deg);  // Rotate the icon when the menu is active
+  opacity: 0.5;  // Temporarily reduce opacity to fade between icons
+}
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php the_title(); ?></title>
