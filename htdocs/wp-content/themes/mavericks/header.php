@@ -28,7 +28,7 @@
 
 <header class="container-fluid main-menu d-flex align-items-center position-relative">
 
-<a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/alexchrysovergis/htdocs/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
+<a class="navbar-brand" href="<?php echo home_url(); ?>"><img class="alexx-website-logo mx-3" src="/wp-content/uploads/2024/04/alexx-web-logo.png" alt="Alexx Logo"></a>
 
 <div class="ham-container d-flex justify-content-end vw-100">
   <a class="mx-3" href="#my-menu"><i class="material-icons menu-icon">menu</i></a>
