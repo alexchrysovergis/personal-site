@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => icon.textContent = 'close', 150); // Delay icon change to allow opacity transition
       }
   });
-}); 
+});
 
 //swiper
 
