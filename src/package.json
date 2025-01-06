@@ -1,29 +1,44 @@
 {
-  "name": "mavericks-theme",
+  "name": "innerzen",
   "version": "1.0.0",
-  "description": "This a theme created for demonstrative purposes.",
+  "description": "A fictional yoga website design",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchrysovergis/InnerZen.git"
   },
   "keywords": [
-    "wp-theme"
+    "yoga",
+    "zen",
+    "web",
+    "design",
+    "web",
+    "development"
   ],
   "author": "Alex Chrysovergis",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexchrysovergis/InnerZen/issues"
+  },
+  "homepage": "https://github.com/alexchrysovergis/InnerZen#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.7.1",
-    "mmenu-light": "^3.2.2",
-    "sass": "^1.72.0",
-    "swiper": "^11.1.0"
+    "sass": "^1.77.5",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "mmenu-js": "^9.3.0"
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "install": "^0.13.0",
+    "npm": "^10.8.1",
+    "typescript": "^5.5.2"
   }
 }
